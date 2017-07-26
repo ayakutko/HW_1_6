@@ -26,8 +26,13 @@ print(second_word(s))
 #10
 s = "Leo Tolstoy*1828-08-28*1910-11-20"
 length = len(s)
-death_date = s[length - 10:length]
-birth_date = s[length - 21:length - 11]
-name = s[0: length - 22]
+#death_date = s[length - 10:length]
+#birth_date = s[length - 21:length - 11]
+#name = s[0: length - 22]
+s_lst = s.split("*")
+name = s_lst[0]
+birth_date = s_lst[1]
+death_date = s_lst[2]
 result_task = int(death_date[0:4]) - int(birth_date[0:4])
 print(name, ",", result_task)
+
